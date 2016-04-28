@@ -1,0 +1,12 @@
+ABOUT
+Retebiome is a set of scripts used in the analysis of microbiome data. It currently has the ability to read in CSV data exported from a Perkin Elmer Labchip GXII. The scripts are principally intended to be used interactively through the Python REPL.
+
+Similarity Calculation Example:
+from bioanalyzer import *
+testl6 = GetNumData(GetData(open("data1.csv").read().splitlines()))
+testp6 = GetNumData(GetData(open("data2.csv").read().splitlines()))
+GraphSimilarity(testp6[0], FlatRef(testp6[1], 80), testl6[0], FlatRef(testl6[1], 80))
+
+ACKNOWLEDGEMENTS
+This work was performed at Pacific Northwest National Laboratories (PNNL), which is operated for the DOE by Battelle Memorial Institute under contract DE-AC06-76RLO1830.
+This project was supported by a grant from the Intelligence Community Postdoctoral Research Fellowship Program.  All statements of fact, opinion, or analysis expressed are those of the author and do not reflect the official positions or views of the Intelligence Community or any other U.S. Government agency.  Nothing in the contents should be construed as asserting or implying U.S. Government authentication of information or Intelligence Community endorsement of the author’s views.
